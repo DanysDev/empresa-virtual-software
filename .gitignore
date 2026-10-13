@@ -1,0 +1,25 @@
+# --- Dependencias y artefactos locales de OpenCode ---
+.opencode/node_modules/
+.opencode/package.json
+.opencode/package-lock.json
+.opencode/bun.lock
+
+# --- Herramientas de desarrollo (no forman parte del sistema) ---
+.archify/
+.playwright-mcp/
+
+# --- Trabajo interno por proyecto (repo público: NO se sube) ---
+# brief, investigación, requerimientos, reportes… quedan en local.
+# El sistema (agentes, reglas, plantillas) y el código sí se versionan.
+empresa/proyectos/*/
+
+# --- Secretos de los proyectos (solo .env.example se versiona) ---
+proyectos/*/*/.env
+**/.env.local
+
+# --- Sistema / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
