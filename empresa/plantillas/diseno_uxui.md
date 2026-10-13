@@ -11,4 +11,5 @@
   eficiencia [ok/no] · minimalismo [ok/no] · errores accionables [ok/no] ·
   ayuda [ok/no] · accesibilidad [ok/no] · usuarios [ok/no] · sistema [ok/no] ·
   rendimiento [ok/no] · ética [ok/no]
+- **Anti-errores IA (A-F):** ninguno presente [ok/no] · hallados: …
 - **Exentas (con motivo):**
