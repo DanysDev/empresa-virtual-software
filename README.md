@@ -1,18 +1,19 @@
 # Empresa Virtual de Software
 
 **Un equipo multiagente que convierte una idea cruda en software corriendo.**
-Sin stack fijo, multi-proyecto, con testing independiente, regresión obligatoria
-y un QA que bloquea entregas.
+Sin stack fijo, multi-proyecto, con testing independiente, regresión obligatoria,
+QA que bloquea entregas y un hacker ético que intenta romperlas antes que nadie.
 
 Todo con modelos de IA **gratuitos** (Google AI Studio + OpenCode ZEN) sobre
 **OpenCode V2**, colaboración **por archivos** (auditable y barata en tokens) y
 reglas inviolables que separan poderes: quien escribe código nunca toca los tests.
 
-> **🇬🇧 Summary (EN).** A 9-role virtual software company built on **OpenCode V2**
+> **🇬🇧 Summary (EN).** A 10-role virtual software company built on **OpenCode V2**
 > (multi-project, no fixed stack) that turns raw ideas into running code: stack
-> research with live docs, requirements, architecture, UX/UI design, fullstack
-> build, independent testing (≥70% coverage + regression suite) and a blocking QA
-> gate. File-based collaboration, free-tier models with a local fallback chain.
+> research with live docs, requirements, architecture with ADRs, UX/UI design,
+> fullstack build, independent testing (≥70% coverage + regression suite),
+> blocking QA gate and an ethical hacker gate (OWASP, PoC, re-test). File-based
+> collaboration, free-tier models with a local fallback chain.
 
 *Diagrama interactivo del sistema (zoom, temas claro/oscuro): `docs/arquitectura.html`.*
 
@@ -24,10 +25,10 @@ auditar, desplegar) que un solo prompt no cubre con calidad. Esta empresa repart
 cada oficio a un especialista con rol cerrado, contrato de archivos y un gate de
 calidad que puede devolver el trabajo.
 
-## Los 9 agentes
+## Los 10 agentes
 
 Un **Director Técnico** (agente primario, única autoridad) habla contigo, gestiona
-el portafolio y reparte las tareas. Los otros ocho son subagentes independientes.
+el portafolio y reparte las tareas. Los otros nueve son subagentes independientes.
 
 | Agente | Rol | Qué entrega |
 |---|---|---|
@@ -39,6 +40,7 @@ el portafolio y reparte las tareas. Los otros ocho son subagentes independientes
 | **Desarrollador Fullstack** | Construye el código (nunca toca `tests/`) | `proyectos/<slug>/vN/src/` |
 | **Ingeniero de Testing** | Tests independientes + regresión, cobertura ≥70% (nunca toca `src/`) | `tests/` + `test_reporte.md` |
 | **Control de Calidad** | Auditor final: funcional + UX/UI + regresión. **Bloquea entregas** | `qa_reporte.md` (APROBADO o CAMBIOS) |
+| **Hacker Ético** | Ataca la app en local (OWASP, PoC, severidad). **Bloquea despliegues** | `pentest_reporte.md` (SEGURO o VULNERABLE) |
 | **DevOps / Documentador** | Local primero; Docker/despliegue **solo con tu OK** | `entrega.md` |
 
 ## Cómo funciona
@@ -56,11 +58,15 @@ idea ─▶ Director ─┬─▶ Investigador ──▶ stack ganador (con docs
                   ├─▶ QA ────────────▶ APROBADO (bloqueante) / CAMBIOS
                   │                       │
                   │            CAMBIOS ───┘ vuelve al responsable
+                  ├─▶ Hacker ────────▶ SEGURO (bloqueante) / VULNERABLE
+                  │                       │
+                  │         VULNERABLE ───┘ dev → testing → QA → re-test
                   └─▶ DevOps ────────▶ entrega local ──tu OK──▶ Docker/despliegue
 ```
 
 Mantenimiento: bugfix/feature → `cambios.md` + tareas nuevas → dev → testing con
-regresión completa → QA → devops. Nada que funcionaba se rompe en silencio.
+regresión completa → QA → hacker (re-test) → devops. Nada que funcionaba se
+rompe en silencio, y nada vulnerable se despliega.
 
 **La comunicación es por archivos, no por chat.** Cada subagente lee lo que dejó
 el anterior y escribe su parte. El Director solo recibe resúmenes cortos (≤12
@@ -73,6 +79,7 @@ Detalle en [`empresa/config/politica.md`](empresa/config/politica.md):
 - **R2** Separación total dev/testing (`src/` solo el dev, `tests/` solo testing)
 - **R3** Cobertura mínima 70% · **R13** regresión obligatoria en cada cambio
 - **R4** QA bloquea: sin APROBADO no hay entrega
+- **R14** Hacker bloquea: sin SEGURO no hay despliegue (con re-test tras cada fix)
 - **R5** Despliegue en 2 fases, solo con OK explícito
 - **R6** Cero secretos en repo (solo `.env.example`)
 - **R11** Código legible en inglés, nombres descriptivos
@@ -91,7 +98,7 @@ Todo con **capas gratuitas**:
 OpenCode V2 admite **un solo modelo por agente**, sin respaldo nativo. Un
 **plugin local en TypeScript** (`.opencode/plugins/model-fallback.ts`) engancha el
 evento de reintento, clasifica el error (cuota, 429/5xx, timeout, red) y cambia al
-siguiente modelo de la cadena. Cubre a los 9 agentes.
+siguiente modelo de la cadena. Cubre a los 10 agentes.
 
 ## Estructura del repositorio
 
@@ -99,16 +106,16 @@ siguiente modelo de la cadena. Cubre a los 9 agentes.
 AGENTS.md                        # manual del proyecto
 .opencode/
   opencode.json                  # modelo por defecto + agente primario
-  agents/*.md                    # los 9 agentes: prompt + modelo + permisos
+  agents/*.md                    # los 10 agentes: prompt + modelo + permisos
   plugins/model-fallback.ts      # cadena de respaldo de modelos
 empresa/
   README.md                      # guía rápida de uso
-  config/politica.md             # reglas inviolables R1-R13
+  config/politica.md             # reglas inviolables R1-R14
   config/modelos.md              # modelos y cadena de respaldo
   portafolio.md                  # todos los proyectos y su estado
   proyectos/_indice.md           # índice de proyectos
   proyectos/<slug>/              # brief.md + cambios.md + vN/
-  plantillas/                    # plantillas de los 11 documentos
+  plantillas/                    # plantillas de los 12 documentos
 proyectos/
   <slug>/vN/src/                 # código · tests/ · README · .env.example
 docs/
@@ -154,7 +161,11 @@ activados.
 - **Stack:** OpenCode V2 (agentes en Markdown + plugin TypeScript), datos en
   Markdown, diagramas en HTML.
 - **Separación de poderes:** dev y testing no pueden tocarse el código
-  mutuamente ni por permisos ni por reglas; la regresión es obligatoria.
+  mutuamente ni por permisos ni por reglas; la regresión es obligatoria. El
+  hacker solo ataca en local y tampoco corrige código.
+- **Diseño exigente:** el Diseñador cumple 15 reglas + 49 anti-errores de IA
+  auditables por QA; el Arquitecto decide con ADRs y trade-offs, y el Dev
+  hereda 10 reglas de código. Sinergia S1–S6 en ambos.
 - Tono técnico directo en español neutro; código y comentarios en inglés.
 
 ## Licencia
