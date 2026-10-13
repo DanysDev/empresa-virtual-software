@@ -69,3 +69,11 @@ tareas entre ellos ni cambian alcance. Bloqueos o choques → en archivo +
 
 Cada bugfix/feature agrega su test de regresión y re-corre la suite completa.
 Si lo viejo se rompe, vuelve al dev. QA lo verifica antes de APROBADO.
+
+## R14. Puerta de seguridad ofensiva
+
+El Hacker Ético ataca al candidato APROBADO por QA, solo en local y sin nada
+destructivo. VULNERABLE con hallazgos críticos o altos bloquea la entrega igual
+que QA: vuelve al fullstack → testing → QA → re-test de seguridad. Solo un
+veredicto SEGURO (o con pendientes leves aceptadas por el usuario) deja pasar a
+DevOps.

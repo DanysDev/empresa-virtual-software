@@ -5,4 +5,4 @@
 | _(vacío)_ | | | | |
 
 Estados: idea · investigación · diseño · construcción · testing · QA ·
-entrega-local · despliegue · pausado.
+seguridad · entrega-local · despliegue · pausado.

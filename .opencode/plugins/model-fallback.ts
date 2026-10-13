@@ -6,7 +6,7 @@
  * recuperable (cuota agotada, 429, 5xx, timeout, red…), cambia el modelo de la
  * sesión al siguiente de la cadena y reintenta.
  *
- * Cadena por defecto (la que usan los 9 agentes de la empresa):
+ * Cadena por defecto (la que usan los 10 agentes de la empresa):
  *   1) principal : google/gemini-3.8-flash         (Google AI Studio — capa gratis)
  *   2) respaldo 1: opencode/big-pickle             (OpenCode ZEN, gratis)
  *   3) respaldo 2: opencode/nemotron-3-ultra-free  (OpenCode ZEN, gratis)
@@ -39,7 +39,7 @@ const CADENA_POR_DEFECTO: ModelRef[] = [
   { providerID: "opencode", id: "nemotron-3-ultra-free" },
 ]
 
-/** Los 9 agentes de la empresa: a ellos sí les aplicamos la cadena. */
+/** Los 10 agentes de la empresa: a ellos sí les aplicamos la cadena. */
 const AGENTES_EMPRESA = new Set([
   "director-tecnico",
   "investigador-stack",
@@ -49,6 +49,7 @@ const AGENTES_EMPRESA = new Set([
   "desarrollador-fullstack",
   "ingeniero-testing",
   "control-calidad-soft",
+  "hacker-etico",
   "devops-documentador",
 ])
 
