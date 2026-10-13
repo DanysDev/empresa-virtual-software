@@ -30,8 +30,8 @@ timeout, red).
   (pon `EMPRESA_FALLBACK_DEBUG=0` para silenciarla).
 - Para cambiar la cadena: edita la constante `CADENA_POR_DEFECTO` en
   `.opencode/plugins/model-fallback.ts` y, si cambias el principal, también los
-  `model:` de los 9 agentes y `.opencode/opencode.json`.
+  `model:` de los 10 agentes y `.opencode/opencode.json`.
 
 ## Cobertura del plugin
 
-`.opencode/plugins/model-fallback.ts` cubre a los 9 agentes de la empresa.
+`.opencode/plugins/model-fallback.ts` cubre a los 10 agentes de la empresa.
