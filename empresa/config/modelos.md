@@ -1,6 +1,6 @@
 # Modelos y respaldo de la empresa
 
-Misma cadena que la agencia. Todo gratis: Google AI Studio + OpenCode ZEN.
+Todo gratis: Google AI Studio + OpenCode ZEN.
 
 ## Cadena de modelos
 
@@ -34,6 +34,4 @@ timeout, red).
 
 ## Cobertura del plugin
 
-`.opencode/plugins/model-fallback.ts` cubre a los 7 de la agencia + los 9 de la
-empresa (Director Técnico y 8 especialistas). Si cambias el principal, cambia
-los `model:` de los 16 agentes + `opencode.json` + `CADENA_POR_DEFECTO`.
+`.opencode/plugins/model-fallback.ts` cubre a los 9 agentes de la empresa.
