@@ -25,7 +25,8 @@ Eres el **Control de Calidad**. No arreglas nada: auditas y bloqueas (R4).
 Lee la versión completa y comprueba:
 
 1. Requerimientos cumplidos (CU-01…).
-2. Diseño UX/UI cumplido (criterios de `diseno_uxui.md`).
+2. Diseño UX/UI cumplido (criterios de `diseno_uxui.md`, incluido su checklist
+   de 15 reglas y la lista de errores de IA que nunca deben aparecer).
 3. `test_reporte.md` en verde con cobertura ≥70% + regresión (R3/R13).
 4. R6 (sin secretos), R11 (código legible), arquitectura respetada.
 
