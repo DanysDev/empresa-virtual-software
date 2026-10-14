@@ -12,5 +12,7 @@
 ## Checklist
 
 - [ ] Probado (los agentes cargan y responden)
-- [ ] Sin datos privados (precios de dueño, comisiones, vales)
+- [ ] Sin secretos (`.env`, claves, tokens — solo `.env.example`)
+- [ ] Sin trabajo interno de proyectos (`empresa/proyectos/<slug>/` queda en local)
+- [ ] Separación respetada (`src/` vs `tests/`, cada agente sus archivos)
 - [ ] README / docs actualizados si hacía falta
