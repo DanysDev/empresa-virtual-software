@@ -1,15 +1,22 @@
 # Investigación · <slug> <vN>
 
-- **Problema y requisitos:** funcionales, NFRs (MoSCoW), restricciones, supuestos
+- **ID/fecha:** ISR-AAAAMMDD-XX · AAAA-MM-DD · objetivo · alcance
+- **Contexto idea:** descripción, público, tipo de producto, MVP previsto
+- **Problema y requisitos:** funcionales, NFRs medibles (MoSCoW), restricciones (equipo/tiempo/costo/infra/cumplimiento)
 - **Opciones:** (mínimo 3 por área crítica: fortalezas, debilidades, riesgos, encaje)
-- **Matriz ponderada:** criterios + pesos + rúbrica + puntajes + ganador justificado
-- **Madurez y riesgo por candidato:** LTS, comunidad (CHAOSS), CVEs, lock-in, EOL
+- **Filtro restricciones:** candidato · motivo descarte · viola must-have [sí/no]
+- **Criterios y rúbrica:** criterio · peso % (suman 100) · justificación · rúbrica 1-5 definida
+- **Matriz ponderada:** puntajes por criterio, ponderados, totales, cálculos visibles
+- **Madurez y riesgo por candidato:** LTS/EOL, roadmap, releases, bus factor, salud comunidad, CVEs
+- **TCO resumido:** hosting, licencias, CI/CD, observabilidad, backups, escalado · corto/medio
+- **Vendor lock-in:** grado bajo/medio/alto · coste migración · exit strategy
 - **Trade-offs, riesgos y mitigaciones:** qué se gana/pierde, prob×impacto, mitigación, exit strategy
-- **Coherencia y arquitectura sugerida:** compatibilidad entre capas, patrón justificado, MVP vs escala
+- **Coherencia y arquitectura sugerida:** encaje capas, fricción, patrón justificado por NFRs, MVP vs escala
 - **IDs Context7 consultados:**
-- **Fuentes:** tecnología · URL · tipo · fecha consulta · versión revisada
-- **Supuestos y dudas abiertas:**
-- **Ganador + Plan B + por qué:**
-- **Próximos pasos:** (spike/PoC/validaciones, 3-4 ítems)
+- **Fuentes:** tecnología · URL · tipo · fecha consulta · versión revisada · dato obtenido
+- **Supuestos y dudas abiertas:** (lo no verificado es supuesto; dudas críticas listadas)
+- **Ganador + Plan B + por qué:** (con trade-off principal y cuándo usar el B)
+- **Próximos pasos:** (spike/PoC/validaciones con criterio de éxito, 3-4 ítems)
 - **Conclusión ejecutiva:** recomendación, razón, mayor trade-off, riesgo + mitigación
-- **Vigencia sugerida:** (3-6 meses)
+- **Rationale ADR-lite:** contexto · decisión · razones · consecuencias ± · alternativas
+- **Vigencia sugerida:** 3-6 meses · revisar en AAAA-MM-DD
