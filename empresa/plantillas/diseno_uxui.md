@@ -6,6 +6,7 @@
 - **Accesibilidad (WCAG 2.2 AA):**
 - **Microcopy clave:**
 - **Criterios medibles para QA:**
+- **Mockups HTML:** `diseno/<pantalla>.html` (mobile 390 + desktop 1280, datos realistas) — APROBADOS uno por uno por el usuario antes de codificar (R15)
 - **Checklist 10+5:** visibilidad [ok/no] · mundo real [ok/no] · control [ok/no] ·
   consistencia [ok/no] · prevención [ok/no] · reconocimiento [ok/no] ·
   eficiencia [ok/no] · minimalismo [ok/no] · errores accionables [ok/no] ·
