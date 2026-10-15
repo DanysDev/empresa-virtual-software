@@ -13,6 +13,14 @@ Todo gratis: Google AI Studio + OpenCode ZEN.
 El respaldo entra solo si el principal falla de forma recuperable (429, 5xx,
 timeout, red).
 
+## Cadena con visión (Diseñador UX/UI)
+
+Verificada por el usuario, en este orden: `google/gemini-3.8-flash` →
+`opencode/space-bunny-free` → `opencode/mimo-v2.6-flash-free` →
+`opencode/longcat-2.5-preview-free`. Configurada como cadena propia en el
+plugin (`CADENAS["disenador-uxui"]`). Fuera de estos 4, el Diseñador no
+aprueba nada visual.
+
 ## Reglas y límites (comprobados en la v2.0.26)
 
 - ⚠️ **Nunca pongas `shell: deny` en un agente.** La capa gratis de ZEN rechaza
