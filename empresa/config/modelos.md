@@ -8,7 +8,7 @@ Todo gratis: Google AI Studio + OpenCode ZEN.
 |-------|--------|-------|
 | Principal | `google/gemini-3.8-flash` | Fijado en cada agente y en `.opencode/opencode.json` |
 | Respaldo 1 | `opencode/big-pickle` | ZEN gratis, el más fuerte |
-| Respaldo 2 | `opencode/nemotron-3-ultra-free` | ZEN gratis, segundo |
+| Respaldo 2 | `opencode/nemotron-3.5-lightning-free` | ZEN gratis, segundo |
 
 El respaldo entra solo si el principal falla de forma recuperable (429, 5xx,
 timeout, red).
