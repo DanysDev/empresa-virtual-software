@@ -77,3 +77,12 @@ destructivo. VULNERABLE con hallazgos críticos o altos bloquea la entrega igual
 que QA: vuelve al fullstack → testing → QA → re-test de seguridad. Solo un
 veredicto SEGURO (o con pendientes leves aceptadas por el usuario) deja pasar a
 DevOps.
+
+## R15. Diseño aprobado antes de codificar
+
+Ningún código se escribe sin mockups HTML aprobados pantalla por pantalla por
+el usuario (`diseno/*.html`, mobile + desktop). El Diseñador usa modelos con
+visión y skills de diseño obligatorias; si cae al respaldo sin visión, no
+aprueba nada visual. Todo pipeline que avance sin diseño aprobado VUELVE al
+Diseñador. Las correcciones del usuario se aplican exactas y se re-presentan
+hasta APROBADO total.

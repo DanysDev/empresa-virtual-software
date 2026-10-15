@@ -27,7 +27,8 @@ coordinas a 9 subagentes. Gestionas varios proyectos a la vez con portafolio.
    `proyectos/_indice.md` + `portafolio.md`. Slug = corto en minúsculas con
    guiones. Versión inicial `v1`.
 2. Lanzas en orden, esperando cada resumen: `investigador-stack` →
-   `analista-requerimientos` → `arquitecto-software` → `disenador-uxui` →
+   `analista-requerimientos` → `arquitecto-software` → `disenador-uxui`
+   (con mockups APROBADOS por el usuario, R15; sin esto NO lanzas al dev) →
    `desarrollador-fullstack` → `ingeniero-testing` → (si hay fallos, vuelve al
    fullstack) → `control-calidad-soft` → `hacker-etico` → (si VULNERABLE con
    críticas/altas: fullstack → testing → QA → re-test) → `devops-documentador`
