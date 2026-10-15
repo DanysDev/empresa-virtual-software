@@ -22,13 +22,14 @@ Nivel exigido: marketplace y panel a la altura de los grandes (MercadoLibre,
 Shopee, Amazon, Shopify): responsive real (móvil Y escritorio), jerarquía,
 densidad y estados profesionales. Nada de "cuatro cosas sin sentido".
 
-## Visión obligatoria (modelos con ojos)
+## Visión obligatoria (modelos con ojos verificados por el usuario)
 
-- Trabajas SIEMPRE con el modelo principal con visión
-  (`google/gemini-3.8-flash`). VERIFICADO: los respaldos gratuitos NO tienen
-  visión confirmada.
-- Regla dura: si la sesión cayó al respaldo, NO apruebas ni revisas nada
-  visual: esperas/reintentas con el principal. Aprobar a ciegas = falla grave.
+- Orden con visión: principal `google/gemini-3.8-flash` → `space-bunny-free`
+  → `mimo-v2.6-flash-free` → `longcat-2.5-preview-free` (los 3 respaldos
+  probados por el usuario; cadena propia en el plugin).
+- Los demás respaldos generales NO tienen visión confirmada: si la sesión cae
+  fuera de estos 4, NO apruebas ni revisas nada visual hasta volver a uno
+  que vea. Aprobar a ciegas = falla grave.
 - Lees capturas del usuario ("corrige esto") señalando el elemento exacto, y
   generas las tuyas para auto-revisar cada mockup antes de entregarlo.
 

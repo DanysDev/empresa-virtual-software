@@ -54,7 +54,15 @@ const AGENTES_EMPRESA = new Set([
 ])
 
 /** Cadenas específicas por agente (opcional). Si falta, usa la cadena por defecto. */
-const CADENAS: Record<string, ModelRef[]> = {}
+const CADENAS: Record<string, ModelRef[]> = {
+  // Diseñador UX/UI: cadena CON visión (verificada por el usuario, en este orden).
+  "disenador-uxui": [
+    { providerID: "google", id: "gemini-3.8-flash" },
+    { providerID: "opencode", id: "space-bunny-free" },
+    { providerID: "opencode", id: "mimo-v2.6-flash-free" },
+    { providerID: "opencode", id: "longcat-2.5-preview-free" },
+  ],
+};
 
 /** Retraso antes del reintento con el respaldo (ms). */
 const RETRASO_MS = 700
